@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.button {
+  background-color: #0f172a; /* bg-slate-900 */
+  color: #fff; /* text-white */
+  padding: 1rem; /* p-4 */
+  border-radius: 0.75rem; /* rounded-xl */
+  font-weight: 700; /* font-bold */
+  cursor: pointer; /* cursor-pointer */
+  transition-property: background-color;
+  transition-duration: 300ms; /* transition-colors duration-300 */
+}
+.button:hover {
+  background-image: linear-gradient(to left, #ef4444, #f87171); /* hover:bg-gradient-to-l from-red-500 to-red-400 */
+}
