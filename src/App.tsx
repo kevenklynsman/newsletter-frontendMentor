@@ -1,43 +1,22 @@
-import ImagemFundoMobile from "../assets/images/illustration-sign-up-mobile.svg";
-import ImagemFundoTablet from "../assets/images/illustration-sign-up-tablet.svg";
-import ImagemFundoDesktop from "../assets/images/illustration-sign-up-desktop.svg";
+import ImagemFundoMobile from "../public/images/illustration-sign-up-mobile.svg";
+import ImagemFundoTablet from "../public/images/illustration-sign-up-tablet.svg";
+import ImagemFundoDesktop from "../public/images/illustration-sign-up-desktop.svg";
 
-import IconList from "../assets/images/icon-list.svg";
-import IconSuccess from "../assets/images/icon-success.svg";
-import { useState, type FormEvent } from "react";
+import IconList from "../public/images/icon-list.svg";
+import IconSuccess from "../public/images/icon-success.svg";
 
-import { validate } from "./utils/validate";
+import { useState } from "react";
+import Form from "./components/Form";
 
-export type User = {
-  email?: string;
-};
+export default function App() {
+  const [success, setSuccess] = useState(false);
 
-function App() {
-  const [email, setEmail] = useState("");
-  const [success, setSuccess] = useState("");
-
-  const [errors, setErrors] = useState<User | null>(null);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setErrors(null);
-
-    const data = {
-      email,
-    };
-
-    const validateErrors = validate(data);
-
-    if (Object.keys(validateErrors).length > 0) {
-      setErrors(validateErrors);
-      return;
-    }
-
-    setEmail("");
-    setSuccess("Obrigado por se inscrever!");
-    setEmail("");
-  }
-
+  const listOfInfos = [
+    "Product discovery and building what matters",
+    "Measuring to ensure updates are a success",
+    "And much more!",
+  ];
+  
   return (
     <>
       <div className="w-full h-screen flex items-center justify-center bg-slate-700">
@@ -53,52 +32,15 @@ function App() {
                 </p>
 
                 <ul className="list-inside flex flex-col space-y-4">
-                  <li>
-                    <img src={IconList} alt="Icon" className="inline mr-2" />
-                    Product discovery and building what matters
-                  </li>
-                  <li>
-                    <img src={IconList} alt="Icon" className="inline mr-2" />
-                    Measuring to ensure updates are a success
-                  </li>
-                  <li>
-                    <img src={IconList} alt="Icon" className="inline mr-2" />
-                    And much more!
-                  </li>
+                  {listOfInfos.map((info, index) => (
+                    <li key={index}>
+                      <img src={IconList} alt="Icon" className="inline mr-2" />
+                      {info}
+                    </li>
+                  ))}
                 </ul>
-                <form
-                  className="flex flex-col space-y-4"
-                  onSubmit={handleSubmit}
-                >
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="flex justify-between font-bold mb-2"
-                    >
-                      Email address
-                      {errors && (
-                        <small className="text-xs text-red-500 mt-1">
-                          {errors.email || "O email é obrigatório"}
-                        </small>
-                      )}
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className={`border p-2 rounded w-full ${
-                        errors
-                          ? "border-red-500 bg-red-200 text-red-600"
-                          : "border-gray-300"
-                      }`}
-                      placeholder="email@company.com"
-                    />
-                  </div>
-                  <button className="button">
-                    Subscribe to monthly newsletter
-                  </button>
-                </form>
+
+                <Form onSuccess={() => setSuccess(true)} />
               </section>
               <section className="w-full md:flex-1/2 flex justify-center md:justify-end">
                 <picture className="w-full lg:w-auto">
@@ -142,7 +84,7 @@ function App() {
                   </p>
                   <button
                     className="button w-full"
-                    onClick={() => setSuccess("")}
+                    onClick={() => setSuccess(false)}
                   >
                     Dismiss message
                   </button>
@@ -155,5 +97,3 @@ function App() {
     </>
   );
 }
-
-export default App;
