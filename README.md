@@ -1,69 +1,64 @@
-# React + TypeScript + Vite
+# Calculadora de Idade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Imagem](./public/images/Imagem01.png.png)
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Um formulário de inscrição para newsletter com mensagem de sucesso ou falha.
 
-## Expanding the ESLint configuration
+O Formulario de Inscrição para newsletter foi um desafio do Frontend Mentor. O desafio consistiu em criar um formulário de inscrição para newsletter com validação de dados e mensagem de sucesso ou falha.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tecnologias e Dependências
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- React
+- TypeScript
+- Node.js
+- Vite
+- Tailwind
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Instalação
+
+Para instalar a Calculadora de Idade, siga os passos abaixo:
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/kevenklynsman/newsletter-frontendMentor.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instale as dependências:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd newsletter-frontendMentor
+npm install
 ```
+
+3. Inicie a aplicação:
+
+```bash
+npm start
+```     
+
+## Pré-requisitos
+
+- vscode
+- Node.js
+- NPM
+
+## Imagens
+
+<p align="center">
+  <img src="./public/images/Imagem02.png" alt="Imagem 2" width="180"/>
+  <img src="./public/images/Imagem03.png" alt="Imagem 3" width="180"/>
+  <img src="./public/images/Imagem04.png" alt="Imagem 4" width="180"/>
+  <img src="./public/images/Imagem05.png" alt="Imagem 5" width="180"/>
+  <img src="./public/images/Imagem06.png" alt="Imagem 6" width="180"/>
+</p>
+
+
+## Contato 
+
+- GitHub: [kevenklynsman](https://github.com/kevenklynsman)
+- LinkedIn: [kevenklynsman](https://www.linkedin.com/in/kevenklynsman/)
+- E-mail: [kevenklynsman2003@gmail.com](mailto:kevenklynsman2003@gmailcom)
