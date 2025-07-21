@@ -1,6 +1,6 @@
 # Calculadora de Idade
 
-![Imagem](./public/images/Imagem01.png.png)
+![Imagem](./public/images/Imagem01.png)
 
 ## Descrição
 
