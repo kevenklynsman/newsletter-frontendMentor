@@ -1,4 +1,4 @@
-import type { User } from "../App";
+import type { User } from "../components/Form";
 
 type Error = {
   [key: string]: string;
