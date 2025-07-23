@@ -1,4 +1,4 @@
-import type { User } from "../components/form/Form";
+import type { User } from "../components/form/Form.js";
 
 export function validate(data: User): User {
   const errors: User = {};

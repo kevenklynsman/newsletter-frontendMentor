@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 
-import { validate } from "../../utils/validate";
+import { validate } from "../../utils/validate.js";
 
 export type User = {
   email?: string;
