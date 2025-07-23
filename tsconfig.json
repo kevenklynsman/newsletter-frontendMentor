@@ -1,7 +1,19 @@
 {
-  "files": [],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "target": "ES2020",
+    "lib": ["dom", "es2020"],
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": "./src"
+  },
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "include": ["jest.setup.ts"],
+  "exclude": ["node_modules"]
 }

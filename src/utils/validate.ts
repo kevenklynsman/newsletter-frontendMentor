@@ -1,14 +1,14 @@
-import type { User } from "../components/Form";
+import type { User } from "../components/form/Form";
 
-type Error = {
-  [key: string]: string;
-};
-
-export function validate(data: User) {
-  const errors: Error = {};
+export function validate(data: User): User {
+  const errors: User = {};
 
   if (!data.email) {
-    errors["email"] = "O email é obrigatório";
+    errors.email = "O email é obrigatório";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    errors.email = "O email é inválido"; 
   }
+
   return errors;
 }
+

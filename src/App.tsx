@@ -6,7 +6,7 @@ import IconList from "../public/images/icon-list.svg";
 import IconSuccess from "../public/images/icon-success.svg";
 
 import { useState } from "react";
-import Form from "./components/Form";
+import Form from "./components/form/Form";
 
 export default function App() {
   const [success, setSuccess] = useState(false);
