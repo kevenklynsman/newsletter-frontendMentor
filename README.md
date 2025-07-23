@@ -16,6 +16,7 @@ O Formulario de Inscrição para newsletter foi um desafio do Frontend Mentor. O
 - Node.js
 - Vite
 - Tailwind
+- Jest
 
 ## Instalação
 
