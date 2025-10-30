@@ -1,6 +1,7 @@
 # Calculadora de Idade
 
-![Imagem](./public/images/Imagem01.png)
+<img src="./public/images/Imagem01.png" alt="Descrição da imagem" width="700" align="center"/>
+
 
 ## Descrição
 
@@ -50,12 +51,13 @@ npm start
 ## Imagens
 
 <p align="center">
-  <img src="./public/images/Imagem02.png" alt="Imagem 2" width="180"/>
-  <img src="./public/images/Imagem03.png" alt="Imagem 3" width="180"/>
-  <img src="./public/images/Imagem04.png" alt="Imagem 4" width="180"/>
-  <img src="./public/images/Imagem05.png" alt="Imagem 5" width="180"/>
-  <img src="./public/images/Imagem06.png" alt="Imagem 6" width="180"/>
+  <img src="./public/images/Imagem02.png" alt="Imagem 2" width="180" />
+  <img src="./public/images/Imagem03.png" alt="Imagem 3" width="180" />
+  <img src="./public/images/Imagem04.png" alt="Imagem 4" width="180" />
+  <img src="./public/images/Imagem05.png" alt="Imagem 5" width="180" />
+  <img src="./public/images/Imagem06.png" alt="Imagem 6" width="180" />
 </p>
+
 
 
 ## Contato 
